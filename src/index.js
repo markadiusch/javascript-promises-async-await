@@ -21,7 +21,7 @@ function getBooksOrMovies(){
     .catch(error => console.log("Error waiting for the promise race", error));
 }
 
-const getBooksOrMoviesPromise = getBooksAndMovies();
+const getBooksOrMoviesPromise = getBooksOrMovies();
 getBooksOrMoviesPromise.then(results => {
     console.log('getBooksorMoviesPromise', results);
 })
