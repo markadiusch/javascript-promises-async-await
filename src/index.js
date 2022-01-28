@@ -1,4 +1,14 @@
 "use strict"
+
+import { fetchWithTimeout } from './services';
+
 export function fetchMovies(){
-    return;
+    const resolveFunction = () => movies;
+    return fetchWithTimeout(1000).then(resolveFunction);
 }
+
+let moviePromise = fetchMovies();
+moviePromise.then(resolveFunction(results));
+console.log(results);
+
+const movies = require('./data/movies.json');
