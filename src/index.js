@@ -1,4 +1,4 @@
 "use strict"
-function fetchMovies(){
+export function fetchMovies(){
     return;
 }
