@@ -1,6 +1,6 @@
 "use strict"
 
-import { fetchWithTimeout } from './services';
+import { fetchWithTimeout } from './services.js';
 const movies = require('./data/movies.json');
 
 export function fetchMovies(){
