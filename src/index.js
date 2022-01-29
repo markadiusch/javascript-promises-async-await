@@ -69,4 +69,3 @@ getBooksOrMoviesAsync()
       results
     });
   })
-  .catch(err => console.error(err));
