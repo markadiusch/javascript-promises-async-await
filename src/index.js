@@ -39,6 +39,7 @@ async function getBooksAndMoviesAsync(){
         };
     } catch (error) {
         console.log("Error fetching books and movies", error);
+        return error;
     }
 }
 
@@ -57,11 +58,14 @@ async function getBooksOrMoviesAsync(){
 
 getBooksAndMoviesAsync()
     .then(results => {
-    console.log("movies and books", {
-        movies: results.movies,
-        books: results.books
-    });
-})
+        console.log("movies and books", {
+            movies: results.movies,
+            books: results.books
+        });
+    })
+    .catch(error => {
+        console.error("Eror in getBooksAndMoviesAsync execution", error);
+    })
 
 getBooksOrMoviesAsync()
   .then(results => {
